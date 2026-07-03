@@ -1,0 +1,117 @@
+@import "./TrainerShared.css";
+
+.trainer-members {
+    display: flex;
+    min-height: 100vh;
+    background: var(--gym-bg);
+}
+
+.trainer-members-content {
+    flex: 1;
+    min-width: 0;
+    padding: 24px 32px 40px;
+}
+
+.trainer-members-header h2 {
+    color: var(--gym-text);
+    font-size: clamp(22px, 2.5vw, 28px);
+    font-weight: 600;
+    margin: 0 0 24px;
+    text-align: left;
+}
+
+.trainer-members-filter {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.trainer-members-filter input {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px 14px;
+    border: 1px solid var(--gym-border);
+    border-radius: 8px;
+    background: var(--gym-card);
+    color: var(--gym-text);
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+}
+
+.trainer-members-filter input::placeholder {
+    color: var(--gym-text-muted);
+}
+
+.trainer-members-filter input:focus {
+    border-color: var(--gym-accent);
+}
+
+.trainer-members-filter select {
+    width: 180px;
+    padding: 12px 14px;
+    border: 1px solid var(--gym-border);
+    border-radius: 8px;
+    background: var(--gym-card);
+    color: var(--gym-text);
+    font-family: inherit;
+    outline: none;
+}
+
+.trainer-members-filter select:focus {
+    border-color: var(--gym-accent);
+}
+
+.trainer-members-table-wrapper {
+    background: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 14px;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.trainer-members-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 760px;
+}
+
+.trainer-members-table thead {
+    background: var(--gym-card);
+}
+
+.trainer-members-table th {
+    padding: 14px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--gym-text-muted);
+    border-bottom: 1px solid var(--gym-border-soft);
+}
+
+.trainer-members-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--gym-border-soft);
+    vertical-align: middle;
+    font-size: 14px;
+    color: var(--gym-text);
+}
+
+.trainer-members-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.trainer-members-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+@media (max-width: 768px) {
+    .trainer-members-content {
+        padding: calc(var(--mobile-header) + 8px) 16px 32px;
+    }
+
+    .trainer-members-filter select {
+        width: 100%;
+    }
+}

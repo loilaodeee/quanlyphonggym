@@ -1,0 +1,320 @@
+@import "../PageLayout.css";
+
+.my-package {
+    display: flex;
+    min-height: 100vh;
+    background: var(--gym-bg);
+}
+
+.my-package-content {
+    flex: 1;
+    min-width: 0;
+    padding: 24px 32px 40px;
+}
+
+.my-package-content h1 {
+    color: var(--gym-text);
+    font-size: clamp(22px, 2.5vw, 30px);
+    font-weight: 600;
+    margin: 0 0 24px;
+    text-align: left;
+}
+
+.my-package-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.my-package-card,
+.my-benefit-card {
+    background: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 14px;
+    padding: 24px;
+}
+
+.my-package-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+}
+
+.my-package-header h2 {
+    color: var(--gym-text);
+    font-size: clamp(22px, 2.5vw, 28px);
+    font-weight: 600;
+    margin: 0;
+}
+
+.package-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.package-info-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--gym-border-soft);
+    color: var(--gym-text-muted);
+    font-size: 15px;
+}
+
+.package-info-row:last-of-type {
+    border-bottom: none;
+}
+
+.package-info-row strong {
+    color: var(--gym-text);
+    text-align: right;
+}
+
+.remaining {
+    color: var(--gym-accent) !important;
+}
+
+.renew-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: var(--gym-accent);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.2s;
+}
+
+.renew-btn:hover:not(:disabled) {
+    background: var(--gym-accent-hover);
+}
+
+.renew-btn:disabled {
+    background: #555;
+    cursor: not-allowed;
+}
+
+.my-package-card.waiting {
+    border-color: rgba(255, 152, 0, 0.35);
+}
+
+/* Lịch sử gói tập */
+.package-history {
+    margin-top: 28px;
+    background: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 14px;
+    padding: 22px 24px;
+    overflow-x: auto;
+}
+
+.package-history h2 {
+    color: var(--gym-text);
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0 0 16px;
+    text-align: left;
+}
+
+.package-history table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 520px;
+}
+
+.package-history th,
+.package-history td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--gym-border-soft);
+    font-size: 14px;
+}
+
+.package-history th {
+    color: var(--gym-text-muted);
+    font-weight: 600;
+    background: var(--gym-card);
+}
+
+.package-history td {
+    color: var(--gym-text);
+}
+
+.package-history tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.package-history tbody tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* Modal gia hạn gói tập */
+.my-package > .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 16px;
+}
+
+.renew-package-modal {
+    width: min(440px, 100%);
+    background: var(--gym-card);
+    border: 2px solid var(--gym-border);
+    border-radius: 14px;
+    padding: 28px 24px;
+    text-align: left;
+}
+
+.renew-package-modal h2 {
+    color: var(--gym-accent);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 20px;
+    text-align: center;
+}
+
+.renew-package-modal select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    margin-bottom: 16px;
+    border: 1px solid var(--gym-border);
+    border-radius: 8px;
+    background: var(--gym-surface);
+    color: var(--gym-text);
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+}
+
+.renew-package-modal select:focus {
+    border-color: var(--gym-accent);
+}
+
+.renew-package-modal p {
+    color: var(--gym-text-muted);
+    font-size: 14px;
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+.renew-package-modal p strong {
+    color: var(--gym-text);
+}
+
+.renew-note {
+    margin: 14px 0;
+    padding: 12px 14px;
+    background: rgba(255, 69, 0, 0.1);
+    border: 1px solid rgba(255, 69, 0, 0.25);
+    border-radius: 8px;
+    color: var(--gym-accent);
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.renew-package-modal button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.renew-package-modal button:first-of-type {
+    background: var(--gym-accent);
+    color: white;
+}
+
+.renew-package-modal button:first-of-type:hover:not(:disabled) {
+    background: var(--gym-accent-hover);
+}
+
+.renew-package-modal button:first-of-type:disabled {
+    background: #555;
+    cursor: not-allowed;
+}
+
+.renew-package-modal button:last-of-type {
+    background: #555;
+    color: white;
+}
+
+.renew-package-modal button:last-of-type:hover {
+    background: #666;
+}
+
+.my-benefit-card h2 {
+    color: var(--gym-text);
+    margin: 0 0 20px;
+    text-align: left;
+    font-size: 17px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--gym-text-muted);
+    margin: 0 0 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--gym-border-soft);
+    font-size: 15px;
+    line-height: 1.45;
+    text-align: left;
+}
+
+.benefit-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.benefit-icon {
+    color: var(--gym-accent);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.my-package-empty {
+    color: var(--gym-text-muted);
+    font-size: 16px;
+    text-align: left;
+    padding: 32px 0;
+}
+
+@media (max-width: 900px) {
+    .my-package-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .my-package-content {
+        padding: calc(var(--mobile-header) + 8px) 16px 32px;
+    }
+
+    .package-image {
+        height: 160px;
+    }
+}

@@ -1,0 +1,263 @@
+@import "./PageLayout.css";
+
+.trainer-detail-page {
+    display: flex;
+    min-height: 100vh;
+    background: var(--gym-bg);
+}
+
+.trainer-detail-content {
+    flex: 1;
+    min-width: 0;
+    padding: 24px 32px 40px;
+}
+
+.trainer-detail-content h1 {
+    color: var(--gym-text);
+    font-size: clamp(22px, 2.5vw, 28px);
+    font-weight: 600;
+    margin: 0 0 24px;
+    text-align: left;
+}
+
+.trainer-detail-wrapper {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.trainer-detail-left {
+    background: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 14px;
+    padding: 24px;
+    display: flex;
+    gap: 24px;
+    text-align: left;
+}
+
+.trainer-avatar-wrap {
+    width: 220px;
+    height: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.trainer-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 0;
+    flex-shrink: 0;
+}
+
+.trainer-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.trainer-info h2 {
+    color: var(--gym-text);
+    font-size: clamp(22px, 2.5vw, 30px);
+    font-weight: 600;
+    margin: 0 0 8px;
+}
+
+.trainer-role {
+    color: var(--gym-accent);
+    margin: 0 0 16px;
+    font-size: 16px;
+}
+
+.trainer-meta p {
+    position: relative;
+    color: var(--gym-text-muted);
+    margin: 10px 0 10px 24px;
+    font-size: 15px;
+}
+
+.trainer-meta-icon {
+    position: absolute;
+    left: -24px;
+    top: 2px;
+    color: var(--gym-accent);
+}
+
+.trainer-about {
+    margin-top: 20px;
+}
+
+.trainer-about h3 {
+    color: var(--gym-text);
+    margin: 0 0 10px;
+    font-size: 16px;
+}
+
+.trainer-about p {
+    color: var(--gym-text-muted);
+    line-height: 1.55;
+    font-size: 14px;
+    margin: 0;
+}
+
+.trainer-detail-right {
+    background: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 14px;
+    padding: 24px;
+    text-align: left;
+}
+
+.trainer-detail-right h2 {
+    color: var(--gym-text);
+    margin: 0 0 16px;
+    font-size: 17px;
+}
+
+.package-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    background: var(--gym-card);
+    border: 1px solid var(--gym-border-soft);
+    padding: 16px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.package-card h3 {
+    color: var(--gym-text);
+    margin: 0 0 4px;
+    font-size: 15px;
+}
+
+.package-card p {
+    color: var(--gym-accent);
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.package-card button {
+    background: var(--gym-accent);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.package-card button:hover {
+    background: var(--gym-accent-hover);
+}
+
+.trainer-detail-page .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 16px;
+}
+
+.trainer-detail-page .modal-box {
+    width: min(480px, 100%);
+    background: var(--gym-card);
+    border: 2px solid var(--gym-border);
+    border-radius: 14px;
+    padding: 28px 24px;
+    color: var(--gym-text);
+    text-align: left;
+}
+
+.trainer-detail-page .modal-box h2 {
+    color: var(--gym-accent);
+    margin: 0 0 16px;
+    font-size: 18px;
+}
+
+.trainer-detail-page .modal-info p {
+    margin: 8px 0;
+    color: var(--gym-text-muted);
+    font-size: 14px;
+}
+
+.trainer-detail-page .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+.trainer-detail-page .btn-primary {
+    background: var(--gym-accent);
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+.trainer-detail-page .btn-secondary {
+    background: #555;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.page-loading-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    color: var(--gym-text-muted);
+    font-size: 15px;
+}
+
+@media (max-width: 900px) {
+    .trainer-detail-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .trainer-detail-left {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .trainer-meta p {
+        margin-left: 0;
+        padding-left: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .trainer-detail-content {
+        padding: calc(var(--mobile-header) + 8px) 16px 32px;
+    }
+
+    .trainer-avatar {
+        width: 100%;
+        max-width: 260px;
+        height: auto;
+        aspect-ratio: 3/4;
+    }
+}

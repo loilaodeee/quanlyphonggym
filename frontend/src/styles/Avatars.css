@@ -1,0 +1,33 @@
+/* Chỉ object-fit cho ảnh — không đổi khung/container */
+
+.profile-avatar,
+.trainer-image,
+.trainer-avatar,
+.booking-avatar,
+.pt-avatar,
+.schedule-pt-avatar,
+.trainer-member-avatar,
+.employee-member-avatar,
+.employee-sell-avatar,
+.service-member-avatar,
+.member-home-avatar-img,
+.verify-photo,
+.member-avatar img,
+.member-edit-avatar img,
+.employee-renew-avatar img,
+.trainers-item-left img,
+.home-container-mid-right img {
+    object-fit: cover;
+    object-position: center;
+}
+
+.trainer-member-avatar-wrap {
+    overflow: hidden;
+}
+
+.trainer-image-wrap,
+.booking-avatar-wrap,
+.trainer-avatar-wrap,
+.schedule-pt-avatar-wrap {
+    overflow: hidden;
+}

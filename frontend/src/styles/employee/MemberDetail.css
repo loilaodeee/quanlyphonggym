@@ -1,0 +1,379 @@
+@import "../PageLayout.css";
+
+.employee-member-detail {
+    display: flex;
+    min-height: 100vh;
+    background: var(--gym-bg);
+}
+
+.employee-member-content {
+    flex: 1;
+    min-width: 0;
+    padding: 24px 32px 40px;
+}
+
+.employee-member-content > h2 {
+    color: var(--gym-text);
+    font-size: clamp(22px, 2.5vw, 28px);
+    font-weight: 600;
+    margin: 0 0 24px;
+    text-align: left;
+}
+
+.member-detail-card {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    background: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 20px;
+}
+
+.member-avatar {
+    width: 180px;
+    flex-shrink: 0;
+}
+
+.member-avatar img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    aspect-ratio: 3/4;
+    border: 2px solid var(--gym-border-soft);
+}
+
+.member-info {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 32px;
+}
+
+.member-info p {
+    margin: 0;
+    color: var(--gym-text-muted);
+    font-size: 14px;
+    text-align: left;
+}
+
+.member-info strong {
+    color: var(--gym-text);
+}
+
+.member-package-card {
+    background: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 14px;
+    padding: 22px 24px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.member-package-card h3 {
+    color: var(--gym-text);
+    font-size: 16px;
+    margin: 0 0 14px;
+}
+
+.member-package-card p {
+    color: var(--gym-text-muted);
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.member-package-card strong {
+    color: var(--gym-text);
+}
+
+.member-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.member-tabs button {
+    padding: 10px 20px;
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 8px;
+    cursor: pointer;
+    background: var(--gym-card);
+    color: var(--gym-text-muted);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.member-tabs button:hover {
+    border-color: var(--gym-accent);
+    color: var(--gym-text);
+}
+
+.member-tabs button.active {
+    background: var(--gym-accent);
+    border-color: var(--gym-accent);
+    color: white;
+}
+
+.member-history-card,
+.member-checkin-card,
+.member-service-card,
+.member-trainer-card {
+    background: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 14px;
+    padding: 22px 24px;
+    overflow-x: auto;
+    text-align: left;
+}
+
+.member-service-card h3,
+.member-trainer-card h3 {
+    color: var(--gym-text);
+    font-size: 16px;
+    margin: 0 0 14px;
+}
+
+.member-history-table,
+.member-checkin-table,
+.member-service-card table,
+.member-trainer-card table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 520px;
+}
+
+.member-history-table th,
+.member-history-table td,
+.member-checkin-table th,
+.member-checkin-table td,
+.member-service-card th,
+.member-service-card td,
+.member-trainer-card th,
+.member-trainer-card td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--gym-border-soft);
+    text-align: left;
+    font-size: 14px;
+}
+
+.member-history-table th,
+.member-checkin-table th,
+.member-service-card th,
+.member-trainer-card th {
+    background: var(--gym-card);
+    color: var(--gym-text-muted);
+    font-weight: 600;
+}
+
+.member-history-table td,
+.member-checkin-table td,
+.member-service-card td,
+.member-trainer-card td {
+    color: var(--gym-text);
+}
+
+.member-history-table tbody tr:hover,
+.member-checkin-table tbody tr:hover,
+.member-service-card tbody tr:hover,
+.member-trainer-card tbody tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.member-detail-buttons {
+    margin-top: 24px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.member-detail-buttons button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    background: var(--gym-accent);
+    color: white;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.member-detail-buttons button:hover {
+    background: var(--gym-accent-hover);
+}
+
+.member-detail-buttons button:last-child {
+    background: var(--gym-card);
+    border: 1px solid var(--gym-border-soft);
+    color: var(--gym-text);
+}
+
+/* Modal chỉnh sửa */
+.member-edit-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 16px;
+}
+
+.member-edit-modal {
+    position: relative;
+    width: min(760px, 100%);
+    max-height: 90vh;
+    overflow-y: auto;
+    background: var(--gym-card);
+    border: 2px solid var(--gym-border);
+    border-radius: 14px;
+    padding: 28px 24px;
+    text-align: left;
+}
+
+.member-edit-modal h3 {
+    color: var(--gym-accent);
+    margin: 0 0 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.member-edit-avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.member-edit-avatar h4 {
+    color: var(--gym-text);
+    margin: 0 0 12px;
+    font-size: 15px;
+}
+
+.member-edit-avatar img {
+    width: 160px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid var(--gym-border-soft);
+    margin-bottom: 10px;
+}
+
+.photo-note {
+    margin: 0 0 10px;
+    color: var(--gym-text-muted);
+    font-size: 13px;
+}
+
+.change-photo-btn {
+    background: var(--gym-accent);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+.close-modal {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    border: none;
+    background: transparent;
+    color: var(--gym-text-muted);
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 4px;
+}
+
+.close-modal:hover {
+    color: var(--gym-text);
+}
+
+.member-edit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.member-edit-grid label {
+    display: block;
+    color: var(--gym-text-muted);
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.member-edit-grid input,
+.member-edit-grid select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid var(--gym-border);
+    border-radius: 8px;
+    background: var(--gym-surface);
+    color: var(--gym-text);
+    font-family: inherit;
+}
+
+.full-width {
+    grid-column: 1 / 3;
+}
+
+.member-edit-buttons {
+    margin-top: 24px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.member-edit-buttons button {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+.member-edit-buttons button:first-child {
+    background: var(--gym-accent);
+    color: white;
+}
+
+.member-edit-buttons button:last-child {
+    background: #555;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .employee-member-content {
+        padding: calc(var(--mobile-header) + 8px) 16px 32px;
+    }
+
+    .member-detail-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .member-info {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .member-edit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: 1;
+    }
+}

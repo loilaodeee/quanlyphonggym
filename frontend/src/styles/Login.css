@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    font-family: 'Arial', sans-serif;
+
+}
+.main{
+    width: 100%;
+    height: 100vh;
+}
+.container{
+    width: 100%;
+    display: flex;
+
+    height: 100vh;
+    background-color: brown;
+}
+.left{
+    width: 60%;
+    position: relative;
+    background-color: wheat;
+}
+.background{
+    width: 100%;
+    height: 100%;
+
+}
+.right{
+    width: 40%;
+    background-color: #101010;
+    height: 100vh;
+    position: relative;
+}
+.logo-hor{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 2px;
+    width: 300px;
+    height: 100px;
+    filter: brightness(1.2);
+}
+.logo{
+    position: absolute;
+    transform: translate(-150%, 30%);
+    width: 500px;
+    height: 500px;
+}
+
+.content{
+    height: 89vh;
+    width: 70vh;
+    margin: 0 120px;
+    background-color: #202020;
+    /* margin: 7% 15%; */
+    transform: translate(12%, 6%);
+    border: 2px solid #585858;
+    border-radius: 16px;
+}
+.content-top{
+    height: 20%;
+}
+.content-top img{
+    margin: 10px 0;
+    width: 250px;
+    height: 200px;
+    transform: translate(-50%, -10%);
+    position: absolute
+}
+.content-bot{
+    margin: 80px 0;
+    height: 70%;
+}
+.content-bot h2{
+    font-size: 30px;
+    color: #FFFFFF;
+}
+
+.content-bot a{
+    
+    text-decoration: none;
+    color: #FF0000;
+}
+.content-bot a:hover{
+    color: #F08080;
+    text-decoration: underline;
+}
+.icon{
+    font-size: 40px;
+    color: #FF4500
+
+}
+.input-box{
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input-box input{
+    width: 80%;
+    padding: 15px;
+    margin: 10px;
+    background-color: #202020;
+    border: 1px solid #848383;
+    border-radius: 10px;
+    color: white;
+}
+.forget{
+    text-align: right;
+    margin: 0 30px;
+}
+.login-btn, .register-btn{
+    width: 88%;
+    text-align: center;
+    margin: 20px 6%;
+
+}
+.login-btn button, .register-btn button{
+    width: 100%;
+    padding: 10px;
+    background-color: #FF4500;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.login-btn button:hover, .register-btn button:hover{
+    background-color: #FF7F50;
+    cursor: pointer;
+}
+
+
+

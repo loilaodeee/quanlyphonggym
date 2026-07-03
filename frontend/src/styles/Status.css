@@ -1,0 +1,91 @@
+
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    line-height: 1.3;
+    border: 1px solid transparent;
+}
+
+.status-badge svg {
+    flex-shrink: 0;
+    font-size: 12px;
+}
+
+/* Cam — đang hoạt động / tích cực / đã thanh toán */
+.status-badge--accent {
+    background: rgba(255, 69, 0, 0.18);
+    color: #ff8c5a;
+    border-color: rgba(255, 69, 0, 0.5);
+}
+
+/* Vàng — chờ xử lý / đã đặt / chờ xác nhận */
+.status-badge--warning {
+    background: rgba(255, 193, 7, 0.16);
+    color: #ffd54f;
+    border-color: rgba(255, 193, 7, 0.5);
+}
+
+/* Xám — hoàn thành / đã dùng / kết thúc */
+.status-badge--muted {
+    background: rgba(3, 246, 120, 0.18);
+    color: #bdbdbd;
+    border-color: rgba(35, 231, 71, 0.45);
+}
+
+/* Đỏ — hủy / hết hạn / khóa / lỗi */
+.status-badge--danger {
+    background: rgba(244, 67, 54, 0.2);
+    color: #ff8a80;
+    border-color: rgba(244, 67, 54, 0.55);
+}
+
+/* Check-in history — text only */
+.member-checkin-history-item .success {
+    background: transparent;
+    border: none;
+    padding: 0;
+    color: var(--gym-accent);
+    font-size: 14px;
+}
+
+.verify-status-badge {
+    display: inline-flex;
+    margin: 12px auto 0;
+    width: fit-content;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: currentColor;
+    flex-shrink: 0;
+}
+
+.benefit-text {
+    color: var(--gym-accent) !important;
+}
+
+.remaining {
+    color: var(--gym-accent) !important;
+}
+
+.benefit-icon {
+    color: var(--gym-accent) !important;
+}
+
+.payment-desc svg,
+.payment-check svg {
+    color: var(--gym-accent) !important;
+}
+
+.success-inline-icon {
+    color: var(--gym-accent) !important;
+}

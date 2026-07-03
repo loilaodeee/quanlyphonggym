@@ -1,0 +1,329 @@
+@import "../PageLayout.css";
+
+.employee-services {
+    display: flex;
+    min-height: 100vh;
+    background: var(--gym-bg);
+}
+
+.employee-services-content {
+    flex: 1;
+    min-width: 0;
+    padding: 24px 32px 40px;
+}
+
+.employee-services-content h2 {
+    color: var(--gym-text);
+    font-size: clamp(22px, 2.5vw, 28px);
+    font-weight: 600;
+    margin: 0 0 24px;
+    text-align: left;
+}
+
+.service-toolbar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.service-toolbar input {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px 14px;
+    border: 1px solid var(--gym-border);
+    border-radius: 8px;
+    background: var(--gym-card);
+    color: var(--gym-text);
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+}
+
+.service-toolbar input:focus {
+    border-color: var(--gym-accent);
+}
+
+.service-toolbar select {
+    width: 180px;
+    padding: 12px 14px;
+    border: 1px solid var(--gym-border);
+    border-radius: 8px;
+    background: var(--gym-card);
+    color: var(--gym-text);
+    font-family: inherit;
+}
+
+.employee-services table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 14px;
+    overflow: hidden;
+    display: block;
+    overflow-x: auto;
+}
+
+.employee-services thead,
+.employee-services tbody {
+    display: table;
+    width: 100%;
+    min-width: 880px;
+}
+
+.employee-services th,
+.employee-services td {
+    padding: 14px 16px;
+    text-align: center;
+    border-bottom: 1px solid var(--gym-border-soft);
+    font-size: 14px;
+}
+
+.employee-services th {
+    background: var(--gym-card);
+    color: var(--gym-text-muted);
+    font-weight: 600;
+}
+
+.employee-services td {
+    color: var(--gym-text);
+}
+
+.employee-services tbody tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.employee-services tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.employee-services td button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    background: var(--gym-accent);
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.employee-services td button:hover {
+    background: var(--gym-accent-hover);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+.pagination button {
+    min-width: 38px;
+    height: 38px;
+    padding: 0 10px;
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 8px;
+    cursor: pointer;
+    background: var(--gym-card);
+    color: var(--gym-text-muted);
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination button:hover:not(:disabled) {
+    border-color: var(--gym-accent);
+    color: var(--gym-text);
+}
+
+.active-page {
+    background: var(--gym-accent) !important;
+    border-color: var(--gym-accent) !important;
+    color: white !important;
+    font-weight: 600;
+}
+
+.pagination button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.page-dot {
+    color: var(--gym-text-muted);
+}
+
+/* Modal chi tiết dịch vụ */
+.employee-services .service-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 16px;
+}
+
+.employee-services .service-modal {
+    width: min(640px, 100%);
+    max-height: 90vh;
+    overflow-y: auto;
+    background: var(--gym-card);
+    border: 2px solid var(--gym-border);
+    border-radius: 14px;
+    padding: 28px 24px;
+    text-align: left;
+}
+
+.employee-services .service-modal h3 {
+    color: var(--gym-accent);
+    text-align: left;
+    margin: 0 0 16px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.employee-services .service-modal .status-badge {
+    margin: 0 0 24px;
+}
+
+.service-detail {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 24px;
+    align-items: start;
+    text-align: left;
+}
+
+.service-left {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--gym-border-soft);
+}
+
+.service-member-avatar {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border: none;
+    border-radius: 0;
+}
+
+.service-right {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    text-align: left;
+}
+
+.service-right p {
+    margin: 0;
+    padding: 11px 0;
+    border-bottom: 1px solid var(--gym-border-soft);
+    color: var(--gym-text);
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.service-right p:last-child {
+    border-bottom: none;
+}
+
+.service-right strong {
+    color: var(--gym-text-muted);
+    font-weight: 600;
+    margin-right: 6px;
+}
+
+.service-modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--gym-border-soft);
+    flex-wrap: wrap;
+}
+
+.confirm-service-btn {
+    background: var(--gym-accent);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.confirm-service-btn:hover {
+    background: var(--gym-accent-hover);
+}
+
+.close-service-btn {
+    background: #555;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.close-service-btn:hover {
+    background: #666;
+}
+
+@media (max-width: 768px) {
+    .employee-services-content {
+        padding: calc(var(--mobile-header) + 8px) 16px 32px;
+    }
+
+    .service-toolbar {
+        flex-direction: column;
+    }
+
+    .service-toolbar select {
+        width: 100%;
+    }
+
+    .service-detail {
+        grid-template-columns: 1fr;
+    }
+
+    .service-left {
+        max-width: 200px;
+        margin: 0;
+    }
+
+    .service-right p {
+        flex-direction: column;
+        gap: 4px;
+        align-items: flex-start;
+    }
+
+    .service-right p > :not(strong) {
+        text-align: left;
+    }
+
+    .service-modal-buttons {
+        flex-direction: column;
+    }
+
+    .service-modal-buttons button {
+        width: 100%;
+    }
+}

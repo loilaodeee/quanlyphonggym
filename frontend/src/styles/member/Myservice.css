@@ -1,0 +1,272 @@
+@import "../PageLayout.css";
+
+.my-service {
+    display: flex;
+    min-height: 100vh;
+    background: var(--gym-bg);
+}
+
+.my-service-content {
+    flex: 1;
+    min-width: 0;
+    padding: 24px 32px 40px;
+}
+
+.my-service-content h1 {
+    color: var(--gym-text);
+    font-size: clamp(22px, 2.5vw, 30px);
+    font-weight: 600;
+    margin: 0 0 24px;
+    text-align: left;
+}
+
+.service-tab {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.service-tab button {
+    padding: 10px 20px;
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 8px;
+    background: var(--gym-card);
+    color: var(--gym-text-muted);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.service-tab button:hover {
+    color: var(--gym-text);
+    border-color: var(--gym-border);
+}
+
+.service-tab .active {
+    background: var(--gym-accent);
+    border-color: var(--gym-accent);
+    color: white;
+}
+
+.service-section-title {
+    margin: 28px 0 14px;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--gym-text);
+    text-align: left;
+}
+
+.service-card {
+    background: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+}
+
+.service-card > div:first-child {
+    flex: 1;
+    min-width: 0;
+}
+
+.service-card h2 {
+    color: var(--gym-accent);
+    margin: 0 0 10px;
+    font-size: clamp(18px, 2vw, 22px);
+    font-weight: 600;
+}
+
+.service-card p {
+    color: var(--gym-text-muted);
+    white-space: pre-line;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.service-action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.service-price {
+    margin-bottom: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ff6b4a;
+}
+
+.benefit-text {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--gym-accent);
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.request-time {
+    color: var(--gym-accent);
+    font-size: 13px;
+    margin: 0;
+}
+
+.service-empty {
+    background: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    padding: 48px 24px;
+    text-align: center;
+    color: var(--gym-text-muted);
+    border-radius: 14px;
+    font-size: 16px;
+}
+
+/* Modals */
+.service-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 16px;
+}
+
+.service-modal {
+    width: min(420px, 100%);
+    background: var(--gym-card);
+    border: 2px solid var(--gym-border);
+    padding: 28px 24px;
+    border-radius: 14px;
+    color: white;
+    text-align: center;
+}
+
+.service-modal h2 {
+    color: var(--gym-accent);
+    margin: 0 0 16px;
+    font-size: 18px;
+}
+
+.service-modal p {
+    color: var(--gym-text-muted);
+    margin: 8px 0;
+    line-height: 1.55;
+    font-size: 14px;
+    text-align: center;
+}
+
+.service-modal p strong {
+    color: var(--gym-text);
+    font-weight: 600;
+}
+
+.service-modal-btn {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+.cancel-btn {
+    background: #555;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.cancel-btn:hover {
+    background: #666;
+}
+
+.confirm-btn {
+    background: var(--gym-accent);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+.confirm-btn:hover {
+    background: var(--gym-accent-hover);
+}
+
+.member-home-service-item p,
+.member-home-service-item .status-badge {
+    flex-shrink: 0;
+}
+
+.service-action-btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    background: var(--gym-accent);
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    font-family: inherit;
+    white-space: nowrap;
+}
+
+.service-action-btn:hover {
+    background: var(--gym-accent-hover);
+}
+
+.service-status-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.service-section-title {
+    color: var(--gym-text) !important;
+}
+
+@media (max-width: 768px) {
+    .my-service-content {
+        padding: calc(var(--mobile-header) + 8px) 16px 32px;
+    }
+
+    .service-card {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .service-action {
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .service-action button {
+        width: 100%;
+    }
+
+    .service-tab {
+        flex-direction: column;
+    }
+
+    .service-tab button {
+        width: 100%;
+        text-align: center;
+    }
+}

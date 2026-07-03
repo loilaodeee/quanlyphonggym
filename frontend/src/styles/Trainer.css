@@ -1,0 +1,176 @@
+@import "./PageLayout.css";
+
+.trainers {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--gym-bg);
+}
+
+.trainer-content {
+    flex: 1;
+    min-width: 0;
+    padding: 24px 32px 40px;
+}
+
+.trainer-content h1 {
+    color: var(--gym-text);
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 600;
+    margin: 0 0 20px;
+    text-align: left;
+}
+
+.trainer-search-filter {
+    margin-bottom: 16px;
+}
+
+.trainer-search-box {
+    position: relative;
+    max-width: 460px;
+}
+
+.trainer-search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gym-text-muted);
+    font-size: 20px;
+    pointer-events: none;
+}
+
+.trainer-search {
+    width: 100%;
+    height: 42px;
+    padding: 0 14px 0 40px;
+    background-color: var(--gym-card);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 8px;
+    color: var(--gym-text);
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+}
+
+.trainer-search:focus {
+    border-color: var(--gym-accent);
+}
+
+.category {
+    margin-bottom: 20px;
+}
+
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.category-item {
+    padding: 8px 16px;
+    border: 1px solid var(--gym-border-soft);
+    background-color: var(--gym-card);
+    color: var(--gym-text);
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.category-item:hover,
+.category-item.active {
+    background-color: var(--gym-accent);
+    border-color: var(--gym-accent);
+}
+
+.trainer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.trainer-item {
+    background-color: var(--gym-card);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 14px;
+    padding: 18px;
+    text-align: left;
+    overflow: hidden;
+}
+
+.trainer-image-wrap {
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 14px;
+}
+
+.trainer-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+.trainer-item h2 {
+    color: var(--gym-text);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 6px;
+}
+
+.trainer-specialty {
+    color: var(--gym-accent);
+    font-size: 14px;
+    margin: 0 0 4px;
+}
+
+.trainer-experience {
+    color: var(--gym-text-muted);
+    font-size: 13px;
+    margin: 0 0 14px;
+}
+
+.trainer-actions a {
+    text-decoration: none;
+}
+
+.trainer-view {
+    display: block;
+    text-align: center;
+    padding: 10px 16px;
+    background-color: var(--gym-accent);
+    color: var(--gym-text);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.trainer-view:hover {
+    background-color: var(--gym-accent-hover);
+    color: var(--gym-text);
+}
+
+@media (max-width: 768px) {
+    .trainer-content {
+        padding: calc(var(--mobile-header) + 8px) 16px 28px;
+    }
+
+    .category-list {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 4px;
+    }
+
+    .category-item {
+        flex-shrink: 0;
+    }
+
+    .trainer-container {
+        grid-template-columns: 1fr;
+    }
+}

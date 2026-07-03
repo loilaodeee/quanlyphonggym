@@ -1,0 +1,168 @@
+@import "./TrainerShared.css";
+
+.trainer-dashboard {
+    display: flex;
+    min-height: 100vh;
+    background: var(--gym-bg);
+}
+
+.trainer-dashboard-content {
+    flex: 1;
+    min-width: 0;
+    padding: 24px 32px 40px;
+}
+
+.trainer-dashboard-content > h2 {
+    color: var(--gym-text);
+    font-size: clamp(22px, 2.5vw, 28px);
+    font-weight: 600;
+    margin: 0 0 8px;
+    text-align: left;
+}
+
+.trainer-dashboard-date {
+    color: var(--gym-text-muted);
+    font-size: 14px;
+    display: block;
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.trainer-dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.trainer-dashboard-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.trainer-dashboard-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.trainer-dashboard-card.today .trainer-dashboard-icon {
+    background: #3498db;
+}
+
+.trainer-dashboard-card.card-completed .trainer-dashboard-icon {
+    background: var(--gym-accent);
+}
+
+.trainer-dashboard-card.members .trainer-dashboard-icon {
+    background: #9b59b6;
+}
+
+.trainer-dashboard-card.card-booked .trainer-dashboard-icon {
+    background: #f39c12;
+}
+
+.trainer-dashboard-card p {
+    color: var(--gym-text-muted);
+    font-size: 13px;
+    margin: 0 0 6px;
+}
+
+.trainer-dashboard-card h2 {
+    color: var(--gym-text);
+    font-size: clamp(20px, 2vw, 26px);
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.trainer-dashboard-schedule {
+    background: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 14px;
+    padding: 22px 24px;
+    overflow-x: auto;
+}
+
+.trainer-dashboard-schedule h3 {
+    color: var(--gym-text);
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0 0 16px;
+    text-align: left;
+}
+
+.trainer-dashboard-schedule table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 480px;
+}
+
+.trainer-dashboard-schedule th,
+.trainer-dashboard-schedule td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--gym-border-soft);
+    font-size: 14px;
+}
+
+.trainer-dashboard-schedule th {
+    background: var(--gym-card);
+    color: var(--gym-text-muted);
+    font-weight: 600;
+}
+
+.trainer-dashboard-schedule td {
+    color: var(--gym-text);
+}
+
+.trainer-dashboard-schedule tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.trainer-dashboard-schedule tbody tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.trainer-dashboard-schedule .trainer-empty {
+    text-align: center;
+    color: var(--gym-text-muted);
+    padding: 32px 16px !important;
+}
+
+.trainer-dashboard-loading {
+    display: flex;
+    min-height: 100vh;
+    background: var(--gym-bg);
+    align-items: center;
+    justify-content: center;
+    color: var(--gym-text-muted);
+    font-size: 15px;
+}
+
+@media (max-width: 1100px) {
+    .trainer-dashboard-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .trainer-dashboard-content {
+        padding: calc(var(--mobile-header) + 8px) 16px 32px;
+    }
+
+    .trainer-dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+}

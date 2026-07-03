@@ -1,0 +1,237 @@
+@import "../PageLayout.css";
+
+/* Shared — modals, buttons, status, empty state */
+
+.trainer-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 16px;
+}
+
+.trainer-member-modal {
+    width: min(520px, 100%);
+    max-height: 90vh;
+    overflow-y: auto;
+    background: var(--gym-card);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: left;
+    color: var(--gym-text);
+}
+
+.trainer-member-modal h2 {
+    color: var(--gym-accent);
+    margin: 0 0 20px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--gym-border-soft);
+}
+
+.trainer-member-modal-head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--gym-border-soft);
+}
+
+.trainer-member-avatar-wrap {
+    width: 88px;
+    height: 88px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--gym-border-soft);
+}
+
+.trainer-member-avatar {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.trainer-member-modal-head-info h3 {
+    margin: 0 0 6px;
+    font-size: 18px;
+    color: var(--gym-text);
+}
+
+.trainer-member-modal-head-info p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--gym-text-muted);
+}
+
+.trainer-member-section {
+    margin-bottom: 16px;
+}
+
+.trainer-member-section h4 {
+    margin: 0 0 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gym-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.trainer-member-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 12px;
+    background: var(--gym-surface);
+    border-radius: 8px;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.trainer-member-row span:first-child {
+    color: var(--gym-text-muted);
+    flex-shrink: 0;
+}
+
+.trainer-member-row span:last-child {
+    color: var(--gym-text);
+    font-weight: 600;
+    text-align: right;
+    word-break: break-word;
+}
+
+.trainer-member-modal > button:last-child {
+    width: 100%;
+    margin-top: 8px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #555;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.trainer-member-modal > button:last-child:hover {
+    background: #666;
+}
+
+.trainer-confirm-modal {
+    width: min(420px, 100%);
+    background: var(--gym-card);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 16px;
+    padding: 28px 24px;
+    color: var(--gym-text);
+    text-align: left;
+}
+
+.trainer-confirm-modal h2 {
+    margin: 0 0 12px;
+    text-align: left;
+    color: var(--gym-accent);
+    font-size: 18px;
+}
+
+.trainer-confirm-modal > p {
+    text-align: left;
+    color: var(--gym-text-muted);
+    font-size: 14px;
+    margin: 0 0 16px;
+}
+
+.trainer-confirm-info {
+    margin: 16px 0;
+    padding: 16px;
+    background: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 10px;
+}
+
+.trainer-confirm-info p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: var(--gym-text-muted);
+    text-align: left;
+}
+
+.trainer-confirm-info strong {
+    color: var(--gym-text);
+}
+
+.trainer-confirm-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.trainer-btn-confirm,
+.trainer-btn-cancel,
+.trainer-detail-btn,
+.trainer-complete-btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.trainer-detail-btn {
+    background: var(--gym-card);
+    border: 1px solid var(--gym-border-soft);
+    color: var(--gym-text);
+}
+
+.trainer-detail-btn:hover {
+    border-color: var(--gym-accent);
+    color: var(--gym-accent);
+}
+
+.trainer-complete-btn,
+.trainer-btn-confirm {
+    background: var(--gym-accent);
+    color: white;
+}
+
+.trainer-complete-btn:hover,
+.trainer-btn-confirm:hover {
+    background: var(--gym-accent-hover);
+}
+
+.trainer-btn-cancel {
+    background: #555;
+    color: white;
+}
+
+.trainer-btn-cancel:hover {
+    background: #666;
+}
+
+.trainer-table-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.trainer-empty {
+    text-align: center;
+    color: var(--gym-text-muted);
+    padding: 40px 16px !important;
+    font-size: 15px;
+}

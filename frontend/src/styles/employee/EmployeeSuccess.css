@@ -1,0 +1,134 @@
+@import "../PageLayout.css";
+
+
+
+.sell-success-page {
+    min-height: 100vh;
+    background: var(--gym-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+}
+
+.sell-success-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 16px;
+}
+
+.sell-success-card {
+    width: min(480px, 100%);
+    max-height: 90vh;
+    overflow-y: auto;
+    background: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 16px;
+    padding: 32px 28px;
+    text-align: center;
+}
+
+.sell-success-card h2 {
+    color: var(--gym-accent);
+    font-size: clamp(20px, 2.5vw, 22px);
+    font-weight: 600;
+    margin: 0 0 20px;
+}
+
+.sell-success-qr {
+    background: #fff;
+    padding: 16px;
+    border-radius: 12px;
+    display: inline-block;
+    margin: 0 auto 16px;
+    line-height: 0;
+}
+
+.sell-success-qr svg {
+    display: block;
+}
+
+.sell-success-qr-hint {
+    color: var(--gym-text-muted);
+    font-size: 13px;
+    margin: 0 0 20px;
+}
+
+.sell-success-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--gym-border-soft);
+    font-size: 14px;
+    text-align: left;
+}
+
+.sell-success-rows .sell-success-row:last-child {
+    border-bottom: none;
+    margin-bottom: 8px;
+}
+
+.sell-success-row span:first-child {
+    color: var(--gym-text-muted);
+    flex-shrink: 0;
+}
+
+.sell-success-row span:last-child {
+    color: var(--gym-text);
+    font-weight: 600;
+    text-align: right;
+    word-break: break-word;
+}
+
+.sell-success-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.sell-success-actions button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.sell-success-btn-primary {
+    background: var(--gym-accent);
+    color: white;
+}
+
+.sell-success-btn-primary:hover {
+    background: var(--gym-accent-hover);
+}
+
+.sell-success-btn-secondary {
+    background: var(--gym-card);
+    border: 1px solid var(--gym-border-soft);
+    color: var(--gym-text);
+}
+
+.sell-success-btn-secondary:hover {
+    border-color: var(--gym-accent);
+}
+
+.sell-success-btn-close {
+    background: #555;
+    color: white;
+}
+
+.sell-success-btn-close:hover {
+    background: #666;
+}

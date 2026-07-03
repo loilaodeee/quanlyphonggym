@@ -1,0 +1,19 @@
+@import "../Profile.css";
+
+.trainer-profile-loading {
+    display: flex;
+    min-height: 100vh;
+    background: var(--gym-bg);
+    align-items: center;
+    justify-content: center;
+    color: var(--gym-text-muted);
+    font-size: 15px;
+}
+
+.trainer-profile-page .profile-head-right h3 {
+    text-align: left;
+    margin: 20px 24px 12px;
+    color: var(--gym-accent);
+    font-size: 17px;
+    font-weight: 600;
+}

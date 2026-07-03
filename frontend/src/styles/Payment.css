@@ -1,0 +1,199 @@
+@import "./PageLayout.css";
+
+.payment {
+    display: flex;
+    min-height: 100vh;
+    background: var(--gym-bg);
+}
+
+.payment-content {
+    flex: 1;
+    min-width: 0;
+    padding: 24px 32px 40px;
+}
+
+.payment-content h1 {
+    color: var(--gym-text);
+    font-size: clamp(22px, 2.5vw, 30px);
+    font-weight: 600;
+    margin: 0 0 24px;
+    text-align: left;
+}
+
+.payment-wrapper {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.payment-left {
+    background: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 14px;
+    padding: 28px;
+    text-align: left;
+}
+
+.payment-left h2 {
+    color: var(--gym-accent);
+    font-size: clamp(20px, 2.2vw, 26px);
+    font-weight: 600;
+    margin: 0 0 20px;
+}
+
+.payment-desc {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 12px 0;
+    color: var(--gym-text-muted);
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.payment-desc svg {
+    color: var(--gym-accent);
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.payment-check {
+    color: var(--gym-accent);
+    font-size: 16px;
+    font-weight: bold;
+    flex-shrink: 0;
+    display: inline-flex;
+}
+
+.payment-price {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--gym-border-soft);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 16px;
+    color: var(--gym-text-muted);
+}
+
+.payment-price span {
+    font-size: clamp(22px, 2.5vw, 28px);
+    font-weight: 700;
+    color: var(--gym-accent);
+}
+
+.payment-right {
+    background: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 14px;
+    padding: 28px;
+    text-align: left;
+    position: sticky;
+    top: 24px;
+}
+
+.payment-right h2 {
+    color: var(--gym-text);
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0 0 20px;
+}
+
+.payment-method {
+    margin-bottom: 24px;
+}
+
+.payment-method label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: var(--gym-text-muted);
+    cursor: pointer;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.payment-method label:hover {
+    border-color: var(--gym-accent);
+    background: var(--gym-card);
+}
+
+.payment-method input {
+    accent-color: var(--gym-accent);
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.payment-summary {
+    border-top: 1px solid var(--gym-border-soft);
+    padding-top: 16px;
+}
+
+.payment-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.payment-total span:first-child {
+    color: var(--gym-text);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.payment-total span:last-child {
+    color: var(--gym-accent);
+    font-size: clamp(22px, 2.5vw, 28px);
+    font-weight: 700;
+}
+
+.payment-btn {
+    width: 100%;
+    margin-top: 24px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: var(--gym-accent);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.2s;
+}
+
+.payment-btn:hover {
+    background: var(--gym-accent-hover);
+}
+
+.payment-note {
+    margin-top: 16px;
+    color: var(--gym-text-muted);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+    .payment-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-right {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .payment-content {
+        padding: calc(var(--mobile-header) + 8px) 16px 32px;
+    }
+}

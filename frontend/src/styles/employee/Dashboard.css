@@ -1,0 +1,163 @@
+@import "../PageLayout.css";
+
+.employee-dashboard {
+    display: flex;
+    min-height: 100vh;
+    background: var(--gym-bg);
+}
+
+.dashboard-content {
+    flex: 1;
+    min-width: 0;
+    padding: 24px 32px 40px;
+}
+
+.dashboard-content > h2 {
+    color: var(--gym-text);
+    font-size: clamp(22px, 2.5vw, 28px);
+    font-weight: 600;
+    margin: 0 0 8px;
+    text-align: left;
+}
+
+.dashboard-content > span {
+    color: var(--gym-text-muted);
+    font-size: 14px;
+    display: block;
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.dashboard-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.dashboard-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.dashboard-card.member .dashboard-icon {
+    background: #3498db;
+}
+
+.dashboard-card.checkin .dashboard-icon {
+    background: #9b59b6;
+}
+
+.dashboard-card.service .dashboard-icon {
+    background: #f39c12;
+}
+
+.dashboard-card.revenue .dashboard-icon {
+    background: #2ecc71;
+}
+
+.dashboard-card p {
+    color: var(--gym-text-muted);
+    font-size: 13px;
+    margin: 0 0 6px;
+}
+
+.dashboard-card h2 {
+    color: var(--gym-text);
+    font-size: clamp(20px, 2vw, 26px);
+    font-weight: 700;
+    margin: 0;
+}
+
+.dashboard-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.dashboard-box {
+    background: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 14px;
+    padding: 22px 24px;
+    overflow-x: auto;
+}
+
+.dashboard-box h3 {
+    color: var(--gym-text);
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 16px;
+    text-align: left;
+}
+
+.dashboard-box table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 320px;
+}
+
+.dashboard-box th,
+.dashboard-box td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--gym-border-soft);
+    font-size: 14px;
+}
+
+.dashboard-box th {
+    background: var(--gym-card);
+    color: var(--gym-text-muted);
+    font-weight: 600;
+}
+
+.dashboard-box td {
+    color: var(--gym-text);
+}
+
+.dashboard-box tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.dashboard-box tbody tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+@media (max-width: 1100px) {
+    .dashboard-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .dashboard-bottom {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-content {
+        padding: calc(var(--mobile-header) + 8px) 16px 32px;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+}

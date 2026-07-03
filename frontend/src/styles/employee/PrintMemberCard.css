@@ -1,0 +1,132 @@
+#print-member-card{
+
+    position:absolute;
+
+    left:-99999px;
+
+    top:0;
+
+    width:800px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:40px;
+
+    color:black;
+
+    font-family:Arial;
+
+}
+
+.print-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.print-logo{
+
+    width:80px;
+
+}
+
+.print-header h1{
+
+    margin:0;
+
+    font-size:30px;
+
+}
+
+.print-header h2{
+
+    margin-top:8px;
+
+    font-size:20px;
+
+}
+
+.print-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:25px;
+
+}
+
+.print-table td{
+
+    border:1px solid #ccc;
+
+    padding:10px;
+
+}
+
+.print-table td:first-child{
+
+    width:180px;
+
+    font-weight:bold;
+
+    background:#f3f3f3;
+
+}
+
+.print-qr{
+
+    margin-top:30px;
+
+    text-align:center;
+
+}
+
+.print-sign{
+
+    margin-top:70px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+}
+
+.signature-line{
+
+    margin-top:60px;
+
+    border-top:1px solid black;
+
+    width:170px;
+
+}
+
+@media print{
+
+    body *{
+        visibility:hidden;
+    }
+
+    #print-member-card,
+    #print-member-card *{
+        visibility:visible;
+    }
+
+    #print-member-card{
+
+        position:absolute;
+
+        left:0;
+
+        top:0;
+
+    }
+
+}

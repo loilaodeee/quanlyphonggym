@@ -1,0 +1,156 @@
+.main{
+    width: 100%;
+    height: 100vh;
+}
+.container{
+    width: 100%;
+    display: flex;
+
+    height: 100vh;
+    background-color: brown;
+}
+
+.left{
+    width: 45%;
+    position: relative;
+}
+.right{
+    width: 55%;
+    position: relative;
+}
+.logo{
+    position: absolute;
+    transform: translate(-135%, 30%);
+    width: 450px;
+    height: 450px;
+}
+.back{
+    display: flex;
+
+    margin: 20px -30px;
+    width: 30%;
+    justify-content: end;
+    align-items: start; 
+    gap: 8px;
+}
+.back a{
+    text-decoration: none;
+    color: #A9A9A9;
+}
+.back a:hover{
+    color: #FF4500;
+}
+.icon-arr{
+    font-size: 20px;
+    color: #FF4500;
+    margin: 3px 0;
+}
+
+.forgot-content{
+    display: flex;
+    height: 75%;
+
+}
+.forgot-form{
+    
+    width: 55vh;
+    height: 90%;
+    background-color: #202020;
+    border: 2px solid #585858;
+    border-radius: 10px;
+    margin: 0 23px;
+}
+.reset-form{
+    width: 55vh;
+    height: 90%;
+    background-color: #202020;
+    border: 2px solid #585858;
+    border-radius: 10px;
+}
+.right-top{
+    
+    display: flex;
+    height: 25vh;
+    
+}
+.right-logo{
+    width: 70%;
+    display: flex;
+    justify-content: end;
+    height: 100%;
+    margin: 0 -20px;
+    
+
+}
+.right-logo img{
+    width: 40vh;
+    height: 100%;
+}
+
+.forgot-icon{
+    font-size: 50px;
+    margin-top: 50px;
+    color: #FF4500;
+    border: 1px solid #202020;
+    background-color: #2b2828;
+    border-radius: 50%;
+}
+.forgot-content p{
+    color: #d1cece;
+    font-size: 30px;
+    margin: 30px 0;
+}
+.input-box-forgot{
+    width: 100%;
+    height: 50px;
+    margin: 60px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input-box-forgot input{
+    width: 80%;
+    padding: 15px;
+    margin: 10px;
+    background-color: #202020;
+    border: 1px solid #848383;
+    border-radius: 10px;
+    color: white;
+}
+.forgot-btn{
+    width: 88%;
+    text-align: center;
+    margin: 20px 6%;
+}
+.forgot-btn button{
+    width: 98%;
+    padding: 10px;
+    margin: 0 10px;
+    background-color: #FF4500;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.forgot-btn button:hover{
+    background-color: #F08080;
+    cursor: pointer;
+}
+
+.input-box-reset{
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input-box-reset input{
+    width: 80%;
+    padding: 15px;
+    margin: 10px;
+    background-color: #202020;
+    border: 1px solid #848383;
+    border-radius: 10px;
+    color: white;
+}

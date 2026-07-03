@@ -1,0 +1,121 @@
+@import "./TrainerShared.css";
+
+.trainer-schedule {
+    display: flex;
+    min-height: 100vh;
+    background: var(--gym-bg);
+}
+
+.trainer-schedule-content {
+    flex: 1;
+    min-width: 0;
+    padding: 24px 32px 40px;
+}
+
+.trainer-schedule-header h2 {
+    color: var(--gym-text);
+    font-size: clamp(22px, 2.5vw, 28px);
+    font-weight: 600;
+    margin: 0 0 24px;
+    text-align: left;
+}
+
+.trainer-schedule-filter {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.trainer-schedule-filter > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 180px;
+}
+
+.trainer-schedule-filter label {
+    color: var(--gym-text-muted);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.trainer-schedule-filter input,
+.trainer-schedule-filter select {
+    padding: 12px 14px;
+    border: 1px solid var(--gym-border);
+    border-radius: 8px;
+    background: var(--gym-card);
+    color: var(--gym-text);
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+}
+
+.trainer-schedule-filter input:focus,
+.trainer-schedule-filter select:focus {
+    border-color: var(--gym-accent);
+}
+
+.trainer-schedule-table-wrapper {
+    background: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 14px;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.trainer-schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 900px;
+}
+
+.trainer-schedule-table thead {
+    background: var(--gym-card);
+}
+
+.trainer-schedule-table th {
+    padding: 14px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--gym-text-muted);
+    border-bottom: 1px solid var(--gym-border-soft);
+}
+
+.trainer-schedule-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--gym-border-soft);
+    vertical-align: middle;
+    font-size: 14px;
+    color: var(--gym-text);
+}
+
+.trainer-schedule-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.trainer-schedule-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+@media (max-width: 768px) {
+    .trainer-schedule-content {
+        padding: calc(var(--mobile-header) + 8px) 16px 32px;
+    }
+
+    .trainer-schedule-filter > div {
+        flex: 1;
+        min-width: 140px;
+    }
+
+    .trainer-table-actions {
+        flex-direction: column;
+    }
+
+    .trainer-detail-btn,
+    .trainer-complete-btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,98 @@
+@import "./Status.css";
+
+:root {
+    --gym-bg: #101010;
+    --gym-surface: #151416;
+    --gym-card: #202020;
+    --gym-border: #585858;
+    --gym-border-soft: #333;
+    --gym-text: #f4f3f3;
+    --gym-text-muted: #b9b6b6;
+    --gym-accent: #ff4500;
+    --gym-accent-hover: #ff7f50;
+    --sidebar-width: 240px;
+    --mobile-header: 56px;
+}
+
+.home-sidebar,
+.member-home-sidebar,
+.package-sidebar,
+.service-sidebar,
+.trainer-sidebar,
+.contact-sidebar,
+.profile-sidebar,
+.payment-sidebar,
+.my-package-sidebar,
+.my-service-sidebar,
+.my-pt-sidebar,
+.member-checkin-sidebar,
+.member-schedule-sidebar,
+.trainer-detail-sidebar,
+.pt-booking-sidebar,
+.employee-checkin-sidebar,
+.employee-sell-sidebar,
+.employee-renew-sidebar,
+.employee-members-sidebar,
+.employee-member-sidebar,
+.employee-services-sidebar,
+.employee-profile-sidebar,
+.dashboard-sidebar,
+.trainer-dashboard-sidebar,
+.trainer-schedule-sidebar,
+.trainer-members-sidebar {
+    width: var(--sidebar-width);
+    flex-shrink: 0;
+}
+
+.icon-hand {
+    color: var(--gym-accent);
+}
+
+.page-loading-shell,
+.trainer-detail-page,
+.pt-booking,
+.employee-member-detail {
+    /* pages using loading state */
+}
+
+.page-loading-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    color: var(--gym-text-muted);
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    .home-sidebar,
+    .member-home-sidebar,
+    .package-sidebar,
+    .service-sidebar,
+    .trainer-sidebar,
+    .contact-sidebar,
+    .profile-sidebar,
+    .payment-sidebar,
+    .my-package-sidebar,
+    .my-service-sidebar,
+    .my-pt-sidebar,
+    .member-checkin-sidebar,
+    .member-schedule-sidebar,
+    .trainer-detail-sidebar,
+    .pt-booking-sidebar,
+    .employee-checkin-sidebar,
+    .employee-sell-sidebar,
+    .employee-renew-sidebar,
+    .employee-members-sidebar,
+    .employee-member-sidebar,
+    .employee-services-sidebar,
+    .employee-profile-sidebar,
+    .dashboard-sidebar,
+    .trainer-dashboard-sidebar,
+    .trainer-schedule-sidebar,
+    .trainer-members-sidebar {
+        width: 0;
+        overflow: hidden;
+    }
+}

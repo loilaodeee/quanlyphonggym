@@ -1,0 +1,151 @@
+@import "../PageLayout.css";
+
+.my-pt {
+    display: flex;
+    min-height: 100vh;
+    background: var(--gym-bg);
+}
+
+.my-pt-content {
+    flex: 1;
+    min-width: 0;
+    padding: 24px 32px 40px;
+}
+
+.my-pt-content h1 {
+    color: var(--gym-text);
+    font-size: clamp(22px, 2.5vw, 30px);
+    font-weight: 600;
+    margin: 0 0 24px;
+    text-align: left;
+}
+
+.pt-card {
+    background: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 24px;
+    margin-bottom: 16px;
+}
+
+.pt-avatar {
+    width: 100px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.pt-info {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+}
+
+.pt-info h2 {
+    color: var(--gym-text);
+    font-size: clamp(18px, 2vw, 22px);
+    margin: 0 0 8px;
+}
+
+.pt-info p {
+    color: var(--gym-text-muted);
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+.progress {
+    width: 100%;
+    max-width: 320px;
+    height: 8px;
+    background: #333;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 12px 0;
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--gym-accent);
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+
+.pt-action {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.pt-action button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: var(--gym-accent);
+    color: white;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.pt-action button:hover:not(:disabled) {
+    background: var(--gym-accent-hover);
+}
+
+.pt-action button:disabled {
+    background: rgba(3, 246, 120, 0.18);
+    color: #bdbdbd;
+    border-color: rgba(35, 231, 71, 0.45);
+    cursor: not-allowed;
+}
+
+.empty {
+    background: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    padding: 56px 24px;
+    color: var(--gym-text-muted);
+    border-radius: 14px;
+    text-align: center;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .my-pt-content {
+        padding: calc(var(--mobile-header) + 8px) 16px 32px;
+    }
+
+    .pt-card {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .pt-info {
+        text-align: center;
+    }
+
+    .progress {
+        max-width: 100%;
+        margin: 12px auto;
+    }
+
+    .pt-action {
+        width: 100%;
+    }
+
+    .pt-action button {
+        width: 100%;
+    }
+
+    .pt-avatar {
+        width: 80px;
+        height: 96px;
+        margin: 0 auto;
+    }
+}

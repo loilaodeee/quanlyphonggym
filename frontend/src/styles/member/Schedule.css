@@ -1,0 +1,542 @@
+@import "../PageLayout.css";
+
+.member-schedule {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--gym-bg);
+}
+
+.member-schedule-content {
+    flex: 1;
+    min-width: 0;
+    padding: 24px 32px 40px;
+}
+
+.member-schedule-header h2 {
+    color: var(--gym-text);
+    font-size: clamp(22px, 2.5vw, 28px);
+    font-weight: 600;
+    margin: 0 0 24px;
+    text-align: left;
+}
+
+.member-schedule-top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 20px;
+    margin-bottom: 24px;
+    align-items: start;
+}
+
+.member-schedule-calendar {
+    background-color: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    padding: 20px;
+    border-radius: 14px;
+}
+
+.member-schedule-detail {
+    background: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    padding: 20px;
+    border-radius: 14px;
+    text-align: left;
+}
+
+.member-schedule-detail > p {
+    color: var(--gym-text-muted);
+    font-size: 14px;
+    margin: 12px 0;
+}
+
+.member-schedule-book-btn {
+    width: 100%;
+    padding: 12px 18px;
+    margin-bottom: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--gym-accent);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.member-schedule-book-btn:hover {
+    background-color: var(--gym-accent-hover);
+}
+
+.member-schedule-detail-item {
+    background-color: var(--gym-card);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+}
+
+.member-schedule-detail-item h2 {
+    color: var(--gym-accent);
+    font-size: 16px;
+    margin: 0 0 6px;
+}
+
+.member-schedule-detail-item p {
+    color: var(--gym-text-muted);
+    font-size: 13px;
+    margin: 4px 0;
+}
+
+.member-schedule-bottom {
+    background-color: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 14px;
+    padding: 22px 24px;
+}
+
+.member-schedule-bottom h2 {
+    color: var(--gym-text);
+    margin: 0 0 16px;
+    text-align: left;
+    font-size: 17px;
+}
+
+.member-schedule-table{
+    width:100%;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+}
+
+.member-schedule-table table{
+
+    width:100%;
+
+    min-width:760px;
+
+    border-collapse:collapse;
+
+}
+
+.member-schedule-table thead{
+
+    background:var(--gym-card);
+
+}
+
+.member-schedule-table th{
+
+    padding:16px;
+
+    text-align:left;
+
+    font-size:14px;
+
+    color:white;
+
+    font-weight:600;
+
+}
+
+.member-schedule-table td{
+
+    padding:16px;
+
+    border-top:1px solid var(--gym-border-soft);
+
+    color:var(--gym-text-muted);
+
+    font-size:14px;
+
+}
+
+.member-schedule-table tbody tr:hover{
+
+    background:rgba(255,255,255,.03);
+
+}
+
+.btn-table-cancel{
+
+    background:#e53935;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    padding:8px 14px;
+
+    cursor:pointer;
+
+    font-size:13px;
+
+}
+.btn-table-cancel:hover{
+
+    background:#c62828;
+
+}
+.table-empty{
+
+    color:#777;
+
+    font-size:20px;
+
+}
+
+.calendar-dot {
+    width: 7px;
+    height: 7px;
+    background: var(--gym-accent);
+    border-radius: 50%;
+    margin: 4px auto 0;
+}
+
+/* react-calendar */
+.member-schedule-calendar .react-calendar {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: white;
+    font-family: inherit;
+    color-scheme: normal;
+}
+
+.member-schedule-calendar .react-calendar button {
+    margin: 0;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.member-schedule-calendar .react-calendar__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding: 8px;
+    background-color: var(--gym-card);
+    border-radius: 10px;
+}
+
+.member-schedule-calendar .react-calendar__navigation button {
+    min-width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.member-schedule-calendar .react-calendar__navigation button:hover {
+    background-color: var(--gym-accent);
+}
+
+.member-schedule-calendar .react-calendar__navigation button:disabled {
+    color: #555;
+    cursor: default;
+    background: transparent;
+}
+
+.member-schedule-calendar .react-calendar__month-view__weekdays {
+    color: #888;
+    font-size: 12px;
+}
+
+.member-schedule-calendar .react-calendar__viewContainer {
+    background-color: var(--gym-card);
+    border-radius: 10px;
+    padding: 4px;
+}
+
+.member-schedule-calendar .react-calendar__tile {
+    color: white;
+    background-color: #2b2b2b;
+    height: 56px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin: 2px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.member-schedule-calendar .react-calendar__tile--active {
+    background: var(--gym-accent) !important;
+}
+
+.member-schedule-calendar .react-calendar__tile:hover {
+    background: #3e3d3d;
+}
+
+/* Modals */
+.schedule-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 16px;
+}
+
+.schedule-modal {
+    width: min(680px, 100%);
+    max-height: 85vh;
+    overflow-y: auto;
+    background: var(--gym-card);
+    border: 2px solid var(--gym-border);
+    padding: 28px;
+    border-radius: 14px;
+}
+
+.schedule-modal h2 {
+    color: var(--gym-accent);
+    margin: 0 0 20px;
+    text-align: left;
+    font-size: 18px;
+}
+
+.schedule-pt-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    padding: 14px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.schedule-pt-avatar-wrap {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.schedule-pt-avatar {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.schedule-pt-item h3 {
+    color: white;
+    margin: 0 0 4px;
+    font-size: 16px;
+}
+
+.schedule-pt-item p {
+    color: var(--gym-text-muted);
+    margin: 2px 0;
+    font-size: 13px;
+}
+
+.schedule-pt-item > div {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+}
+
+.schedule-pt-item button {
+    flex-shrink: 0;
+    background: var(--gym-accent);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+.schedule-pt-item button:hover {
+    background: var(--gym-accent-hover);
+}
+
+.schedule-pt-empty {
+    text-align: center;
+    padding: 24px 16px;
+}
+
+.schedule-pt-empty p {
+    color: var(--gym-text-muted);
+    font-size: 15px;
+    margin: 0 0 16px;
+}
+
+.schedule-register-pt-btn {
+    width: 100%;
+    max-width: 280px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: var(--gym-accent);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.schedule-register-pt-btn:hover {
+    background: var(--gym-accent-hover);
+}
+
+.schedule-confirm-modal {
+    background: var(--gym-card);
+    border: 2px solid var(--gym-border);
+    width: min(400px, 100%);
+    border-radius: 14px;
+    padding: 28px 24px;
+    text-align: center;
+    color: var(--gym-text);
+}
+
+.schedule-confirm-modal h2 {
+    color: var(--gym-accent);
+    margin: 0 0 16px;
+    font-size: 18px;
+}
+
+.schedule-confirm-modal p {
+    color: var(--gym-text-muted);
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.confirm-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-cancel {
+    padding: 10px 20px;
+    border: none;
+    background: #555;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+.btn-confirm {
+    padding: 10px 20px;
+    border: none;
+    background: #e53935;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+.schedule-pt-item{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    padding:18px;
+    border-radius:14px;
+    background:var(--gym-surface);
+    border:1px solid var(--gym-border-soft);
+    margin-bottom:14px;
+}
+
+.schedule-pt-left{
+    flex-shrink:0;
+}
+
+.schedule-pt-avatar-wrap{
+    width:82px;
+    height:82px;
+    border-radius:50%;
+    overflow:hidden;
+    border:3px solid var(--gym-accent);
+}
+
+.schedule-pt-avatar{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.schedule-pt-info{
+    flex:1;
+    min-width:0;
+}
+
+.schedule-pt-info h3{
+    margin:0 0 6px;
+    font-size:18px;
+    color:white;
+}
+
+.schedule-pt-info p{
+    margin:4px 0;
+    color:var(--gym-text-muted);
+    font-size:14px;
+}
+
+.schedule-pt-action{
+    flex-shrink:0;
+}
+
+.schedule-pt-action button{
+    min-width:120px;
+    padding:11px 18px;
+    border:none;
+    border-radius:8px;
+    background:var(--gym-accent);
+    color:#fff;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.schedule-pt-action button:hover{
+    background:var(--gym-accent-hover);
+}
+
+@media (max-width: 1024px) {
+    .member-schedule-top {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .member-schedule-content {
+        padding: calc(var(--mobile-header) + 8px) 16px 32px;
+    }
+
+    .schedule-pt-item {
+        flex-wrap: wrap;
+    }
+
+    .schedule-pt-item button {
+        width: 100%;
+    }
+
+    .member-schedule-table{
+
+        border-radius:10px;
+
+    }
+
+    .member-schedule-table table{
+
+        min-width:720px;
+
+    }
+}

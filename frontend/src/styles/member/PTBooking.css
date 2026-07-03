@@ -1,0 +1,136 @@
+@import "../PageLayout.css";
+
+.pt-booking {
+    display: flex;
+    min-height: 100vh;
+    background: var(--gym-bg);
+}
+
+.pt-booking-content {
+    flex: 1;
+    min-width: 0;
+    padding: 24px 32px 40px;
+}
+
+.booking-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.booking-left {
+    background: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 14px;
+    padding: 28px 24px;
+    text-align: center;
+}
+
+.booking-left h2 {
+    color: var(--gym-accent);
+    margin: 0 0 20px;
+    font-size: 17px;
+}
+
+.booking-avatar-wrap {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 16px;
+    border: 3px solid var(--gym-border-soft);
+}
+
+.booking-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+}
+
+.booking-left h3 {
+    color: var(--gym-text);
+    margin: 0 0 8px;
+    font-size: 20px;
+}
+
+.booking-left p {
+    color: var(--gym-text-muted);
+    margin: 6px 0;
+    font-size: 14px;
+}
+
+.booking-right {
+    background: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 14px;
+    padding: 28px 24px;
+    text-align: left;
+}
+
+.booking-right h2 {
+    color: var(--gym-text);
+    margin: 0 0 20px;
+    font-size: 17px;
+}
+
+.booking-right label {
+    display: block;
+    color: var(--gym-text-muted);
+    margin: 16px 0 8px;
+    font-size: 14px;
+}
+
+.booking-right input,
+.booking-right select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    background: var(--gym-card);
+    color: var(--gym-text);
+    border: 1px solid var(--gym-border);
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+}
+
+.booking-right input:focus,
+.booking-right select:focus {
+    border-color: var(--gym-accent);
+}
+
+.booking-btn {
+    width: 100%;
+    margin-top: 28px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: var(--gym-accent);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.booking-btn:hover {
+    background: var(--gym-accent-hover);
+}
+
+@media (max-width: 900px) {
+    .booking-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .pt-booking-content {
+        padding: calc(var(--mobile-header) + 8px) 16px 32px;
+    }
+}

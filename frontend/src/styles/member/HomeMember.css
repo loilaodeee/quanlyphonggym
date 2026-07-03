@@ -1,0 +1,321 @@
+@import "../PageLayout.css";
+
+.member-home {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    background-color: var(--gym-bg);
+}
+
+.member-home-content {
+    flex: 1;
+    min-width: 0;
+    padding: 24px 32px 36px;
+}
+
+.member-home-header h1 {
+    color: var(--gym-text);
+    font-size: clamp(22px, 2.5vw, 28px);
+    font-weight: 600;
+    margin: 0 0 20px;
+    text-align: left;
+}
+
+.member-home-overview {
+    margin-bottom: 20px;
+}
+
+.member-home-profile-qr {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    align-items: stretch;
+}
+
+.member-home-profile {
+    flex: 1;
+    background-color: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.member-home-qr {
+    width: 260px;
+    flex-shrink: 0;
+    background-color: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 12px;
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.member-home-avatar-name {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.member-home-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 2px solid var(--gym-accent);
+}
+
+.member-home-avatar-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.member-home-name {
+    text-align: left;
+}
+
+.member-home-name h3 {
+    color: var(--gym-text);
+    font-size: clamp(20px, 2.2vw, 26px);
+    font-weight: 600;
+    margin: 0 0 4px;
+}
+
+.member-home-name p {
+    color: var(--gym-text-muted);
+    font-size: 14px;
+    margin: 0;
+}
+
+.member-home-info {
+    display: flex;
+    gap: 24px;
+    text-align: left;
+}
+
+.member-home-info-item {
+    flex: 1;
+}
+
+.member-home-info-item p {
+    color: var(--gym-text-muted);
+    font-size: 14px;
+    margin: 0 0 10px;
+    line-height: 1.5;
+}
+
+.member-home-info-item strong {
+    color: var(--gym-text);
+    font-weight: 600;
+}
+
+.member-home-qr p {
+    color: var(--gym-accent);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.member-home-qr svg {
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+}
+
+.member-home-qr a {
+    width: 100%;
+    text-decoration: none;
+}
+
+.checkin-link {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--gym-accent);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.2s;
+}
+
+.checkin-link:hover {
+    background-color: var(--gym-accent-hover);
+}
+
+.member-home-statis {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.member-home-statis-item {
+    background-color: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 12px;
+    padding: 20px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.member-home-statis-item h2 {
+    color: var(--gym-accent);
+    font-size: clamp(24px, 3vw, 30px);
+    font-weight: 800;
+    margin: 0 0 6px;
+}
+
+.member-home-statis-item p {
+    color: var(--gym-text-muted);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.member-home-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.member-home-schedule,
+.member-home-service-history {
+    background-color: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 12px;
+    padding: 20px;
+    min-height: 180px;
+}
+
+.member-home-schedule h2,
+.member-home-service-history h2 {
+    color: var(--gym-text);
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0 0 14px;
+    text-align: left;
+}
+
+.member-home-schedule-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.member-home-schedule-box > p {
+    color: var(--gym-text-muted);
+    width: 100%;
+    text-align: center;
+    padding: 16px;
+}
+
+.member-home-schedule-detail {
+    flex: 1 1 calc(50% - 10px);
+    min-width: 180px;
+    background-color: var(--gym-card);
+    border-radius: 10px;
+    padding: 12px 14px;
+    text-align: left;
+}
+
+.member-home-schedule-detail p {
+    color: var(--gym-text-muted);
+    font-size: 13px;
+    margin: 0 0 4px;
+    padding: 0;
+}
+
+.member-home-schedule-detail strong {
+    color: var(--gym-accent);
+}
+
+.member-home-service-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 12px 0;
+    border-top: 1px solid var(--gym-border-soft);
+}
+
+.member-home-service-item:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+.member-home-service-item h4 {
+    color: var(--gym-text);
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.member-home-service-item p {
+    color: var(--gym-accent);
+    font-size: 13px;
+    margin: 0;
+}
+
+@media (max-width: 1100px) {
+    .member-home-profile-qr {
+        flex-direction: column;
+    }
+
+    .member-home-qr {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .member-home-statis {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .member-home-content {
+        padding: calc(var(--mobile-header) + 8px) 16px 28px;
+    }
+
+    .member-home-info {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .member-home-footer {
+        grid-template-columns: 1fr;
+    }
+
+    .member-home-qr {
+        flex-direction: column;
+    }
+
+    .member-home-schedule-detail {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .member-home-statis {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+}

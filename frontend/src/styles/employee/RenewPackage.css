@@ -1,0 +1,334 @@
+@import "../PageLayout.css";
+
+.employee-renew {
+    display: flex;
+    min-height: 100vh;
+    background: var(--gym-bg);
+}
+
+.employee-renew-content {
+    flex: 1;
+    min-width: 0;
+    padding: 24px 32px 40px;
+}
+
+.employee-renew-header h2 {
+    color: var(--gym-text);
+    font-size: clamp(22px, 2.5vw, 28px);
+    font-weight: 600;
+    margin: 0 0 24px;
+    text-align: left;
+}
+
+.employee-renew-top {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 20px;
+    margin-bottom: 24px;
+    align-items: start;
+}
+
+.employee-renew-form,
+.employee-renew-preview {
+    background: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 14px;
+    padding: 24px;
+    text-align: left;
+}
+
+.employee-renew-form h3,
+.employee-renew-preview h3 {
+    color: var(--gym-text);
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 16px;
+}
+
+.employee-renew-form hr {
+    border: none;
+    border-top: 1px solid var(--gym-border-soft);
+    margin: 20px 0;
+}
+
+.renew-search {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.renew-search input {
+    flex: 1;
+    padding: 12px 14px;
+    border: 1px solid var(--gym-border);
+    border-radius: 8px;
+    background: var(--gym-card);
+    color: var(--gym-text);
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+}
+
+.renew-search input:focus {
+    border-color: var(--gym-accent);
+}
+
+.renew-search button {
+    width: auto;
+    min-width: 80px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background: var(--gym-accent);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.renew-search button:hover {
+    background: var(--gym-accent-hover);
+}
+
+.employee-renew-form select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    margin-top: 8px;
+    border: 1px solid var(--gym-border);
+    border-radius: 8px;
+    background: var(--gym-card);
+    color: var(--gym-text);
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+}
+
+.employee-renew-form select:focus {
+    border-color: var(--gym-accent);
+}
+
+.employee-package-info {
+    margin: 14px 0;
+    padding: 12px 14px;
+    background: var(--gym-card);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 8px;
+}
+
+.employee-package-info p {
+    color: var(--gym-text-muted);
+    font-size: 14px;
+    margin: 4px 0;
+}
+
+.renew-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin: 14px 0;
+    padding: 12px 14px;
+    background: rgba(255, 69, 0, 0.1);
+    border: 1px solid rgba(255, 69, 0, 0.25);
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.renew-result span {
+    color: var(--gym-text-muted);
+}
+
+.renew-result strong {
+    color: var(--gym-accent);
+}
+
+.employee-payment-method {
+    margin: 16px 0 0;
+}
+
+.employee-payment-method label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    margin-bottom: 8px;
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 8px;
+    color: var(--gym-text-muted);
+    cursor: pointer;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.employee-payment-method label:last-child {
+    margin-bottom: 0;
+}
+
+.employee-payment-method label:hover {
+    border-color: var(--gym-accent);
+    background: var(--gym-card);
+}
+
+.employee-payment-method input[type="radio"] {
+    accent-color: var(--gym-accent);
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.employee-renew-preview {
+    text-align: center;
+}
+
+.employee-renew-avatar img {
+    width: 160px;
+    height: 160px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 3px solid var(--gym-border-soft);
+}
+
+.employee-renew-empty {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gym-card);
+    border: 2px dashed var(--gym-border-soft);
+    border-radius: 12px;
+    color: var(--gym-text-muted);
+    font-size: 13px;
+}
+
+.employee-renew-preview p {
+    color: var(--gym-text-muted);
+    font-size: 14px;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.employee-renew-preview p strong {
+    color: var(--gym-text);
+}
+
+.employee-renew-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: var(--gym-accent);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.employee-renew-btn:hover:not(:disabled) {
+    background: var(--gym-accent-hover);
+}
+
+.employee-renew-btn:disabled {
+    background: #555;
+    cursor: not-allowed;
+}
+
+.employee-renew-history {
+    background: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    border-radius: 14px;
+    padding: 22px 24px;
+}
+
+.employee-renew-history h3 {
+    color: var(--gym-text);
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0;
+    text-align: left;
+}
+
+/* Modal xác nhận (dùng chung class với SellPackage) */
+.employee-sell-confirm {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 16px;
+}
+
+.employee-sell-confirm-content {
+    width: min(420px, 100%);
+    background: var(--gym-card);
+    border: 2px solid var(--gym-border);
+    border-radius: 14px;
+    padding: 28px 24px;
+    text-align: center;
+}
+
+.employee-sell-confirm-content h3 {
+    color: var(--gym-accent);
+    margin: 0 0 16px;
+    font-size: 18px;
+}
+
+.employee-sell-confirm-content p {
+    color: var(--gym-text-muted);
+    font-size: 14px;
+    margin: 0 0 20px;
+}
+
+.employee-sell-confirm-btns {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.employee-sell-confirm-btn,
+.employee-sell-cancel-btn {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.employee-sell-confirm-btn {
+    background: var(--gym-accent);
+    color: white;
+}
+
+.employee-sell-cancel-btn {
+    background: #555;
+    color: white;
+}
+
+@media (max-width: 900px) {
+    .employee-renew-top {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .employee-renew-content {
+        padding: calc(var(--mobile-header) + 8px) 16px 32px;
+    }
+
+    .renew-search {
+        flex-direction: column;
+    }
+
+    .renew-search button {
+        width: 100%;
+    }
+}

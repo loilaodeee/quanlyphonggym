@@ -1,0 +1,153 @@
+@import "./PageLayout.css";
+
+.payment-success {
+    min-height: 100vh;
+    background: var(--gym-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 16px;
+}
+
+.payment-success > h2 {
+    color: var(--gym-text-muted);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.payment-success-box {
+    width: min(520px, 100%);
+    background: var(--gym-surface);
+    border: 1px solid var(--gym-border-soft);
+    padding: 40px 32px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.success-icon {
+    font-size: 72px;
+    color: var(--gym-accent);
+    margin-bottom: 20px;
+}
+
+.payment-success-box h1 {
+    color: var(--gym-text);
+    font-size: clamp(22px, 2.5vw, 28px);
+    font-weight: 600;
+    margin: 0 0 16px;
+}
+
+.payment-success-box p {
+    color: var(--gym-text-muted);
+    font-size: 15px;
+    line-height: 1.55;
+    margin: 8px 0;
+}
+
+.success-message {
+    margin: 12px 0;
+    color: var(--gym-text) !important;
+    font-size: 16px !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.success-inline-icon {
+    color: #39c35a;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.member-info {
+    width: 100%;
+    margin: 20px 0;
+    padding: 18px 20px;
+    border-radius: 12px;
+    background: var(--gym-card);
+    border: 1px solid var(--gym-border-soft);
+    text-align: left;
+}
+
+.member-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.member-info-row:last-child {
+    margin-bottom: 0;
+}
+
+.member-info-row span {
+    color: var(--gym-text-muted);
+}
+
+.member-info-row strong {
+    color: var(--gym-text);
+}
+
+.success-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+}
+
+.success-actions a {
+    text-decoration: none;
+}
+
+.success-actions button,
+.package-btn,
+.home-btn {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 10px;
+    background: var(--gym-accent);
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: inherit;
+    transition: background-color 0.2s;
+}
+
+.success-actions button:hover,
+.package-btn:hover,
+.home-btn:hover {
+    background: var(--gym-accent-hover);
+}
+
+.home-btn {
+    background: var(--gym-card) !important;
+    border: 1px solid var(--gym-border-soft);
+    color: var(--gym-text) !important;
+}
+
+.home-btn:hover {
+    background: var(--gym-border-soft) !important;
+    border-color: var(--gym-border);
+}
+
+@media (max-width: 480px) {
+    .payment-success-box {
+        padding: 32px 20px;
+    }
+
+    .success-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .success-actions a,
+    .success-actions button {
+        width: 100%;
+    }
+}

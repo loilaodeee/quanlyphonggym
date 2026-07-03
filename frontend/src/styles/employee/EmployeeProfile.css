@@ -1,0 +1,24 @@
+@import "../Profile.css";
+
+/* Employee profile — dùng chung layout Profile, chỉ override tối thiểu */
+
+.employee-profile-page .profile-head-right h3 {
+    text-align: left;
+    margin: 20px 24px 12px;
+    color: var(--gym-accent);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.employee-profile-page .profile-head-right .member-box {
+    margin-top: 0;
+}
+
+.employee-profile-loading {
+    display: flex;
+    min-height: 100vh;
+    background: var(--gym-bg);
+    align-items: center;
+    justify-content: center;
+    color: var(--gym-text-muted);
+}
