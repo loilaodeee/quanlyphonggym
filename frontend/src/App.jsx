@@ -28,7 +28,6 @@ import {ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Checkout from './pages/Checkout'
 import Checkin from './pages/employee/Checkin'
-import HomeEmployee from './pages/employee/HomeEmployee'
 import SellPackage from './pages/employee/SellPackage'
 import EmployeeSuccess from './pages/employee/EmployeeSuccess'
 import RenewPackage from './pages/employee/RenewPackage'
